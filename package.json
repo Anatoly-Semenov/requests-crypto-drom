@@ -12,7 +12,7 @@
 	},
 	"type": "module",
 	"main": "./dist/requests.umd.js",
-	"module": "./dist/requests.js",
+	"module": "./dist/requests.es.js",
 	"license": "MIT",
 	"types": "index.d.ts",
 	"files": [
