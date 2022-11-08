@@ -5,6 +5,7 @@ import type { Constructor } from "../types"
 import type { CarsService as ICarsService } from "@drom/types"
 
 type Car = ICarsService.Car
+type CarCreate = ICarsService.CarCreate
 
 export default class CarsService extends BaseService {
 	constructor(ctx: Constructor) {
@@ -23,11 +24,11 @@ export default class CarsService extends BaseService {
 		return this.httpClient.$delete(`/cars-service/cars/${id}`)
 	}
 
-	updateCar(id: string, car: ICarsService.CreateCarDto): Promise<Car> {
+	updateCar(id: string, car: CarCreate): Promise<Car> {
 		return this.httpClient.$put(`/cars-service/cars/${id}`, car)
 	}
 
-	createCar(id: string, car: ICarsService.CreateCarDto): Promise<Car> {
+	createCar(id: string, car: CarCreate): Promise<Car> {
 		return this.httpClient.$put(`/cars-service/cars/${id}`, car)
 	}
 
