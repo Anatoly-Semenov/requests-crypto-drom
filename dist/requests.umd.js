@@ -7,29 +7,29 @@
 		  i((t.types = {})))
 })(this, function(t) {
 	"use strict"
-	var n = Object.defineProperty
-	var $ = (t, i, s) =>
+	var C = Object.defineProperty
+	var f = (t, i, s) =>
 		i in t
-			? n(t, i, { enumerable: !0, configurable: !0, writable: !0, value: s })
+			? C(t, i, { enumerable: !0, configurable: !0, writable: !0, value: s })
 			: (t[i] = s)
-	var p = (t, i, s) => ($(t, typeof i != "symbol" ? i + "" : i, s), s)
+	var l = (t, i, s) => (f(t, typeof i != "symbol" ? i + "" : i, s), s)
 	class i {
 		constructor(e) {
-			p(this, "httpClient")
-			p(this, "cookies")
-			p(this, "redirect")
-			p(this, "store")
-			var C
+			l(this, "httpClient")
+			l(this, "cookies")
+			l(this, "redirect")
+			l(this, "store")
+			var d
 			const a =
 					(e == null ? void 0 : e.$axios) ||
 					(e == null ? void 0 : e.HttpClient),
-				l = (C = e == null ? void 0 : e.app) == null ? void 0 : C.$cookies,
-				d = e == null ? void 0 : e.redirect,
-				h = e == null ? void 0 : e.store
+				h = (d = e == null ? void 0 : e.app) == null ? void 0 : d.$cookies,
+				p = e == null ? void 0 : e.redirect,
+				r = e == null ? void 0 : e.store
 			;(this.httpClient = a),
-				l && (this.cookies = l),
-				d && (this.redirect = d),
-				h && (this.store = h)
+				h && (this.cookies = h),
+				p && (this.redirect = p),
+				r && (this.store = r)
 		}
 	}
 	class s extends i {
@@ -50,6 +50,15 @@
 		}
 		createCar(e, a) {
 			return this.httpClient.$put(`/cars-service/cars/${e}`, a)
+		}
+		getColorsList() {
+			return this.httpClient.$get("/cars-service/colors")
+		}
+		getBrandsList() {
+			return this.httpClient.$get("/cars-service/brands")
+		}
+		getModelsList() {
+			return this.httpClient.$get("/cars-service/models")
 		}
 	}
 	;(t.CarsService = s),
