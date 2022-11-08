@@ -30,4 +30,16 @@ export default class CarsService extends BaseService {
 	createCar(id: string, car: ICarsService.CreateCarDto): Promise<Car> {
 		return this.httpClient.$put(`/cars-service/cars/${id}`, car)
 	}
+
+	getColorsList(): Promise<ICarsService.Color[]> {
+		return this.httpClient.$get("/cars-service/colors")
+	}
+
+	getBrandsList(): Promise<ICarsService.Brand[]> {
+		return this.httpClient.$get("/cars-service/brands")
+	}
+
+	getModelsList(): Promise<ICarsService.Model[]> {
+		return this.httpClient.$get("/cars-service/models")
+	}
 }
