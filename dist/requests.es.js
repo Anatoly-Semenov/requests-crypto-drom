@@ -38,8 +38,8 @@ class g extends $ {
 	updateCar(e, i) {
 		return this.httpClient.$put(`/cars-service/cars/${e}`, i)
 	}
-	createCar(e, i) {
-		return this.httpClient.$put(`/cars-service/cars/${e}`, i)
+	createCar(e) {
+		return this.httpClient.$post("/cars-service/cars/", e)
 	}
 	getColorsList() {
 		return this.httpClient.$get("/cars-service/colors")
