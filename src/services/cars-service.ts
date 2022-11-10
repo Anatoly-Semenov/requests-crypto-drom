@@ -40,7 +40,7 @@ export default class CarsService extends BaseService {
 		return this.httpClient.$get("/cars-service/brands")
 	}
 
-	getModelsList(): Promise<ICarsService.Model[]> {
-		return this.httpClient.$get("/cars-service/models")
+	getModelsList(brandId: string | number): Promise<ICarsService.Model[]> {
+		return this.httpClient.$get(`/cars-service/brands/${brandId}/models`)
 	}
 }

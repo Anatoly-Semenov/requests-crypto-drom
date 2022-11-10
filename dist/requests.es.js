@@ -47,8 +47,8 @@ class g extends $ {
 	getBrandsList() {
 		return this.httpClient.$get("/cars-service/brands")
 	}
-	getModelsList() {
-		return this.httpClient.$get("/cars-service/models")
+	getModelsList(e) {
+		return this.httpClient.$get(`/cars-service/brands/${e}/models`)
 	}
 }
 export { g as CarsService }
