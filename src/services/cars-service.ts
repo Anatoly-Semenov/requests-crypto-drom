@@ -29,7 +29,7 @@ export default class CarsService extends BaseService {
 	}
 
 	createCar(car: CarCreate): Promise<Car> {
-		return this.httpClient.$post(`/cars-service/cars/`, car)
+		return this.httpClient.$post(`/cars-service/cars`, car)
 	}
 
 	getColorsList(): Promise<ICarsService.Color[]> {

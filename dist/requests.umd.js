@@ -49,7 +49,7 @@
 			return this.httpClient.$put(`/cars-service/cars/${e}`, l)
 		}
 		createCar(e) {
-			return this.httpClient.$post("/cars-service/cars/", e)
+			return this.httpClient.$post("/cars-service/cars", e)
 		}
 		getColorsList() {
 			return this.httpClient.$get("/cars-service/colors")
