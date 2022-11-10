@@ -23,13 +23,13 @@
 			const l =
 					(e == null ? void 0 : e.$axios) ||
 					(e == null ? void 0 : e.HttpClient),
-				h = (d = e == null ? void 0 : e.app) == null ? void 0 : d.$cookies,
-				p = e == null ? void 0 : e.redirect,
-				r = e == null ? void 0 : e.store
+				r = (d = e == null ? void 0 : e.app) == null ? void 0 : d.$cookies,
+				h = e == null ? void 0 : e.redirect,
+				p = e == null ? void 0 : e.store
 			;(this.httpClient = l),
-				h && (this.cookies = h),
-				p && (this.redirect = p),
-				r && (this.store = r)
+				r && (this.cookies = r),
+				h && (this.redirect = h),
+				p && (this.store = p)
 		}
 	}
 	class s extends i {
@@ -57,8 +57,8 @@
 		getBrandsList() {
 			return this.httpClient.$get("/cars-service/brands")
 		}
-		getModelsList() {
-			return this.httpClient.$get("/cars-service/models")
+		getModelsList(e) {
+			return this.httpClient.$get(`/cars-service/brands/${e}/models`)
 		}
 	}
 	;(t.CarsService = s),
