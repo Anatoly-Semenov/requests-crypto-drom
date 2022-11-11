@@ -36,8 +36,8 @@
 		constructor(e) {
 			super(e)
 		}
-		getCars() {
-			return this.httpClient.$get("/cars-service/cars")
+		getCars(e) {
+			return this.httpClient.$get("/cars-service/cars", { params: e })
 		}
 		getCarDetail(e) {
 			return this.httpClient.$get(`/cars-service/cars/${e}`)
