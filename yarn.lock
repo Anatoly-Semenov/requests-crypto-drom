@@ -4,7 +4,7 @@
 
 "@drom/types@git+https://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:x-oauth-basic@github.com/Anatoly-Semenov/types-crypto-drom.git":
   version "0.1.0"
-  resolved "git+https://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:x-oauth-basic@github.com/Anatoly-Semenov/types-crypto-drom.git#30b0f45a3899f0ff39386a5a647bf1faedca2fe3"
+  resolved "git+https://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:x-oauth-basic@github.com/Anatoly-Semenov/types-crypto-drom.git#eb2bf8f6598120ae8a4a42efafe4b02e96852d68"
 
 "@esbuild/android-arm@0.15.10":
   version "0.15.10"
