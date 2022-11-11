@@ -2,7 +2,7 @@ import BaseService from "./base-service"
 
 // Types
 import type { Constructor } from "../types"
-import type { CarsService as ICarsService } from "@drom/types"
+import type { CarsService as ICarsService, ResponseList } from "@drom/types"
 
 type Car = ICarsService.Car
 type CarCreate = ICarsService.CarCreate
@@ -12,8 +12,8 @@ export default class CarsService extends BaseService {
 		super(ctx)
 	}
 
-	getCars(): Promise<Car[]> {
-		return this.httpClient.$get("/cars-service/cars")
+	getCars(params: ICarsService.CarsListQuery): Promise<ResponseList<Car>> {
+		return this.httpClient.$get("/cars-service/cars", {	params })
 	}
 
 	getCarDetail(id: string): Promise<Car> {
